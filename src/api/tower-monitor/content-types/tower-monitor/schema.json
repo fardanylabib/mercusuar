@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tower_monitors",
+  "info": {
+    "singularName": "tower-monitor",
+    "pluralName": "tower-monitors",
+    "displayName": "TowerMonitor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "values": {
+      "type": "json"
+    },
+    "control": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tower-control.tower-control",
+      "mappedBy": "monitor"
+    }
+  }
+}

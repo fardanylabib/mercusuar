@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tower_controls",
+  "info": {
+    "singularName": "tower-control",
+    "pluralName": "tower-controls",
+    "displayName": "TowerControl",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "values": {
+      "type": "json"
+    },
+    "monitor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tower-monitor.tower-monitor",
+      "inversedBy": "control"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
